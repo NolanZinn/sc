@@ -24,9 +24,6 @@ public class MainActivity extends AppCompatActivity
     android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
     ChargeFragment chargeFragment = new ChargeFragment();
-    InstructionsFragment instructionsFragment = new InstructionsFragment();
-    WhyFragment whyFragment = new WhyFragment();
-    ContactFragment contactFragment = new ContactFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,17 +102,20 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_charge)
         {
-            boolean what = currentFragment instanceof InstructionsFragment;
             if(!(currentFragment instanceof ChargeFragment))
             {
                 fragmentTransaction.replace(R.id.frag_container, chargeFragment);
+<<<<<<< HEAD
                 fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
+=======
+>>>>>>> parent of 9bba04e... Adding more functionality.
             }
             //Show main page
         }
         else if (id == R.id.nav_instr)
         {
+<<<<<<< HEAD
             boolean what = currentFragment instanceof InstructionsFragment;
             if(!(currentFragment instanceof InstructionsFragment))
             {
@@ -123,10 +123,13 @@ public class MainActivity extends AppCompatActivity
                 fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
+=======
+>>>>>>> parent of 9bba04e... Adding more functionality.
             //Show instructions page
         }
         else if (id == R.id.nav_why)
         {
+<<<<<<< HEAD
             boolean what = currentFragment instanceof InstructionsFragment;
             if(!(currentFragment instanceof WhyFragment))
             {
@@ -134,10 +137,13 @@ public class MainActivity extends AppCompatActivity
                 fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
+=======
+>>>>>>> parent of 9bba04e... Adding more functionality.
             //Show why it works page
         }
         else if (id == R.id.nav_contact)
         {
+<<<<<<< HEAD
             boolean what = currentFragment instanceof InstructionsFragment;
             if(!(currentFragment instanceof ContactFragment))
             {
@@ -145,6 +151,8 @@ public class MainActivity extends AppCompatActivity
                 fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
+=======
+>>>>>>> parent of 9bba04e... Adding more functionality.
             //Show contact us page
         }
         /*else if (id == R.id.nav_share)
