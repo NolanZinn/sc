@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schema.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nolanz.sc.ChargeFragment">
 
+    <TextView
+        android:id="@+id/whyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Why It Works:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/whyBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        android:text="Smart Charger operates on a few principles of smart charging practice.\n\n\t1) Do not charge continuously from low battery percentage to high battery percentage.  This causes the battery to heat up, which damages the battery.\n\n\t2) Minimalize the amount of time your battery is at high voltage (between 80% and 100%).  This places strain on the battery, which damages it.\n\n\t3) Do not leave your phone plugged in after it reaches 10%.\n\n\tNormal overnight charging practices break all three of these principles, but Smart Charger uses battery data from your phone to enforce smart charging practices.\n\tSmart Charger uses interval charging to ensure that the battery does not heat up as much during charging.  Using the user-input finish time, Smart Charger also minimalizes the time your battery spends at high voltage by waiting until the end of the charging period to charge from 80% to 100%.  Lastly, Smart Charger stops charging once the phone reaches 100%."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whyTitle" />
 </android.support.constraint.ConstraintLayout>

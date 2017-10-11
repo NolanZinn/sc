@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.nolanz.sc.ChargeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

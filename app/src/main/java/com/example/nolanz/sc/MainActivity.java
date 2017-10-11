@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity
             if(!(currentFragment instanceof ChargeFragment))
             {
                 fragmentTransaction.replace(R.id.frag_container, chargeFragment);
+                fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
             //Show main page
@@ -119,6 +120,7 @@ public class MainActivity extends AppCompatActivity
             if(!(currentFragment instanceof InstructionsFragment))
             {
                 fragmentTransaction.replace(R.id.frag_container, instructionsFragment);
+                fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
             //Show instructions page
@@ -129,6 +131,7 @@ public class MainActivity extends AppCompatActivity
             if(!(currentFragment instanceof WhyFragment))
             {
                 fragmentTransaction.replace(R.id.frag_container, whyFragment);
+                fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
             //Show why it works page
@@ -139,6 +142,7 @@ public class MainActivity extends AppCompatActivity
             if(!(currentFragment instanceof ContactFragment))
             {
                 fragmentTransaction.replace(R.id.frag_container, contactFragment);
+                fragmentTransaction.addToBackStack();
                 fragmentTransaction.commit();
             }
             //Show contact us page
