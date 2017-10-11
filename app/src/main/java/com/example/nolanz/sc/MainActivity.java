@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity
     android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
     ChargeFragment chargeFragment = new ChargeFragment();
+    InstructionsFragment instructionsFragment = new InstructionsFragment();
+    WhyFragment whyFragment = new WhyFragment();
+    ContactFragment contactFragment = new ContactFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,22 +105,42 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_charge)
         {
+            boolean what = currentFragment instanceof InstructionsFragment;
             if(!(currentFragment instanceof ChargeFragment))
             {
                 fragmentTransaction.replace(R.id.frag_container, chargeFragment);
+                fragmentTransaction.commit();
             }
             //Show main page
         }
         else if (id == R.id.nav_instr)
         {
+            boolean what = currentFragment instanceof InstructionsFragment;
+            if(!(currentFragment instanceof InstructionsFragment))
+            {
+                fragmentTransaction.replace(R.id.frag_container, instructionsFragment);
+                fragmentTransaction.commit();
+            }
             //Show instructions page
         }
         else if (id == R.id.nav_why)
         {
+            boolean what = currentFragment instanceof InstructionsFragment;
+            if(!(currentFragment instanceof WhyFragment))
+            {
+                fragmentTransaction.replace(R.id.frag_container, whyFragment);
+                fragmentTransaction.commit();
+            }
             //Show why it works page
         }
         else if (id == R.id.nav_contact)
         {
+            boolean what = currentFragment instanceof InstructionsFragment;
+            if(!(currentFragment instanceof ContactFragment))
+            {
+                fragmentTransaction.replace(R.id.frag_container, contactFragment);
+                fragmentTransaction.commit();
+            }
             //Show contact us page
         }
         /*else if (id == R.id.nav_share)
