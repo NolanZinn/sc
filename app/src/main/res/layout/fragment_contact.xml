@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nolanz.sc.ChargeFragment">
+    tools:context="com.example.nolanz.sc.ContactFragment">
 
     <TextView
         android:id="@+id/contactTitle"
@@ -25,12 +25,14 @@
         android:id="@+id/contactBody"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="\tIf you have any questions, comments, or concerns, please feel free to email us at pittsmartcharger@gmail.com. Thanks!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactTitle"
         tools:layout_constraintLeft_toLeftOf="parent"
         tools:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintTop_toBottomOf="@+id/contactTitle"
-        app:layout_constraintTop_toBottomOf="@+id/contactTitle"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>

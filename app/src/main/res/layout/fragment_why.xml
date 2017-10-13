@@ -5,7 +5,7 @@
     xmlns:tools="http://schema.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nolanz.sc.ChargeFragment">
+    tools:context="com.example.nolanz.sc.WhyFragment">
 
     <TextView
         android:id="@+id/whyTitle"
