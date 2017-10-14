@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity
     InstructionsFragment instructionsFragment = new InstructionsFragment();
     ContactFragment contactFragment = new ContactFragment();
     WhyFragment whyFragment = new WhyFragment();
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 
     @Override
@@ -43,7 +41,10 @@ public class MainActivity extends AppCompatActivity
             }
         });*/
 
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.frag_container, chargeFragment);
+        fragmentTransaction.commit();
 
 
 
@@ -102,11 +103,14 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_charge)
         {
-            boolean what = currentFragment instanceof InstructionsFragment;
+            boolean what = currentFragment instanceof ChargeFragment;
             if(!(currentFragment instanceof ChargeFragment))
             {
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frag_container, chargeFragment);
-                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
             //Show main page
@@ -116,30 +120,39 @@ public class MainActivity extends AppCompatActivity
             boolean what = currentFragment instanceof InstructionsFragment;
             if(!(currentFragment instanceof InstructionsFragment))
             {
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frag_container, instructionsFragment);
-                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
             //Show instructions page
         }
         else if (id == R.id.nav_why)
         {
-            boolean what = currentFragment instanceof InstructionsFragment;
+            boolean what = currentFragment instanceof WhyFragment;
             if(!(currentFragment instanceof WhyFragment))
             {
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frag_container, whyFragment);
-                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
             //Show why it works page
         }
         else if (id == R.id.nav_contact)
         {
-            boolean what = currentFragment instanceof InstructionsFragment;
+            boolean what = currentFragment instanceof ContactFragment;
             if(!(currentFragment instanceof ContactFragment))
             {
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frag_container, contactFragment);
-                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
             //Show contact us page
